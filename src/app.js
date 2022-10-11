@@ -4,7 +4,16 @@ function App() {
    const [login, setLogin] = React.useState(false);
 
    if (login) {
-      return <h1>Success</h1>
+      return (
+         <>
+            <h1>Success</h1>
+            <button onClick={function () {
+               setLogin(false);
+            }}>
+               Logout
+            </button>
+         </>
+      )
    }   
    
    return (
