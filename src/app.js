@@ -1,32 +1,20 @@
 const root = document.querySelector('#root')
 
 function App() {
-   const [diklik, setDiklik] = React.useState(false);
-   const [count, setCount] = React.useState(0);
+   const [login, setLogin] = React.useState(false);
 
-   React.useEffect(() => {
-      console.log('exec');
-   
-      return () => {
-         console.log('destroy');
-      }
-   });
-   
+   if (login) {
+      return <h1>Success</h1>
+   }   
    
    return (
       <>
-         <h1 id="judul">Hello ini judul</h1>
+         <h1>Klik Login !!!</h1>
          <button onClick={function () {
-            setDiklik(true);
+            setLogin(true);
          }}>
-            Di Klik
+            Login
          </button>
-         <button onClick={function () {
-            setCount(count+1);
-         }}>
-            Tambah
-         </button>
-         <span>Sudah ditambah {count}</span>
       </>
    )
 }
