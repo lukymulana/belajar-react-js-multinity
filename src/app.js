@@ -1,14 +1,23 @@
 const root = document.querySelector('#root')
 
 function App() {
-   const fruits = ['apple', 'Orange', 'Grape', 'Lengkeng'];
-   
+   const namaRef = React.useRef(null);
+
+   const ketikaSubmit = (event) => {
+      event.preventDefault();
+
+      const nama = namaRef.current.value;
+      console.log('My Name', nama);
+   }
+
    return (
-      <ul>
-         {fruits.map((i) => {
-            return <li key={i}>{i}</li>;
-         })}
-      </ul>
+      <form onSubmit={ketikaSubmit}>
+         <div>
+            <label>Nama : </label>
+            <input type="text" name="nama" ref={namaRef} />
+         </div>
+         <button type="submit">Kirim</button>
+      </form>
    )
 }
 
