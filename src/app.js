@@ -6,7 +6,7 @@ function App() {
    return (
       <>
          <h1>Klik Login !!!</h1>
-         <p>{login ? <b>Success</b> : <i>Error</i>}</p>
+         <p>{login && <b>Success</b>}</p>
          <button onClick={function () {
             setLogin(true);
          }}>
