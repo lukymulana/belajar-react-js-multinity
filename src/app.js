@@ -1,7 +1,7 @@
 const root = document.querySelector('#root')
 
 function App() {
-   const [nama, setNama] = React.useState('')
+   const [nama, setNama] = React.useState('');
 
    const ketikaSubmit = (event) => {
       event.preventDefault();
